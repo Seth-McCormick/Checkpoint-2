@@ -1,6 +1,25 @@
 body {
-    background-image: url("./Forest.gif");
-    min-height: 90vh;
+    background-image: url("./cave\ crystal.jpg");
+    object-fit: fill;
 
 
+
+}
+
+main {
+    height: 94vh;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    min-height: 6vh;
+
+}
+
+img {
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+h3 {
+    background-color: rgba(255, 255, 255, 0.507);
 }

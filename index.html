@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Time to Train</title>
+    <title>Cave of Crystals</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,31 +18,56 @@
 <body>
     <header class="container-fluid"></header>
     <main class="container-fluid">
-        <div class="row text-dark text-center p-5 m-2">
-            <h3 class="col-12 p-3 bg-light rounded shadow">Hi-yah: <span id="skill">0</span></h3>
-            <div class="row d-flex justify-content-around">
-                <div class="col-3"></div>
-                <div class="col-3">
-                    <img height="500" src="./8-bit sword.jpg" onclick="mine()" alt="">
+        <div class="row text-dark d-flex justify-content-center p-5 m-2">
+            <h2 class="col-2 p-3 mb-3 d-flex ">Crystals: <span id="Crystals">0</span></h2>
+            <div class="row d-flex justify-content-between p-0">
+                <div class="col-3 d-flex justify-content-end ms-5 ">
+                    <h3 class=" rounded">Purchase Upgrades:</h3>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-3 d-flex   me-4">
+                    <h3 class="rounded">Purchase Help:</h3>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+                <div
+                    class="col-3 rounded-pill shadow bg-light d-flex justify-content-around align-items-center text-center ">
+                    <div>
+                        <button class="rounded" onclick="buyStamina()">Stamina </button>
+                        <p class="m-0">Price: <span id="stamina-price"></span></p>
+                        <p class="m-0">Quantity: <span id="buy-stamina">0</span></p>
+                        <p class="m-0">Collecting: <span id="stamina-crystals"></span></p>
+                    </div>
+
+                    <div>
+                        <button class="rounded" onclick="buyStrength()">Strength </button>
+                        <p class="m-0">Price: <span id="strength-price"></span></p>
+                        <p class="m-0">Quantity: <span id="buy-strength">0</span></p>
+                        <p class="m-0">Collecting: <span id="strength-crystals"></span></p>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <img class=" img-fluid" src="./Crystal1.png" onclick=" mine()" alt="">
+                </div>
+                <div
+                    class="col-3 rounded-pill shadow bg-light d-flex justify-content-around align-items-center text-center">
+                    <div>
+                        <button class="rounded" onclick="buyFriend()">Friend </button>
+                        <p class="m-0">Price: <span id="friend-price"></span></p>
+                        <p class="m-0">Quantity: <span id="buy-friend">0</p>
+                        <p class="m-0">Collecting: <span id="friend-crystals"></span></p>
+                    </div>
+                    <div>
+                        <button class="rounded" onclick="buySluice()">Sluice </button>
+                        <p class="m-0">Price: <span id="sluice-price"></span></p>
+                        <p class="m-0">Quantity: <span id="buy-sluice">0</span></p>
+                        <p class="m-0">Collecting: <span id="sluice-crystals"></span></p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row bg-light text-dark">
-            <div class="col-6 d-flex ">
-                <button class="rounded-pill" onclick="buyStamina()">Stamina </button>
-                <div>
-                    <p>Quantity: <span id="buy-stamina">0</span></p>
-                    <p>50 Hi-Yahs</p>
-
-                </div>
-                <div class="col-6 d-flex ">
-                    <button class="rounded-pill" onclick="buyStance()">Stance </button>
-                    <div>
-                        <p>Quantity: <span id="buy-stance">0</span></p>
-                        <p>=300 Hi-Yahs</p>
-                    </div>
-                </div>
+            <div class="col-6 d-flex ">Hello
             </div>
     </main>
     <footer></footer>
