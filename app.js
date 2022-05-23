@@ -2,7 +2,7 @@ let clickUpgrades = {
     stamina: {
         price: 25,
         quantity: 0,
-        multiplier: 1.5
+        multiplier: 1
     },
     strength: {
         price: 50,
@@ -34,6 +34,9 @@ function mine() {
     crystals += 1
     if (clickUpgrades.stamina.quantity >= 1) {
         crystals += clickUpgrades.stamina.quantity
+    }
+    if (clickUpgrades.strength.quantity >= 1) {
+        crystals += clickUpgrades.strength.quantity * clickUpgrades.strength.multiplier
 
 
     }
@@ -50,8 +53,7 @@ function update() {
 }
 
 function buyStamina() {
-    if (crystals >= clickUpgrades.stamina.price
-    ) {
+    if (crystals >= clickUpgrades.stamina.price) {
         clickUpgrades.stamina.quantity += 1
         crystals -= clickUpgrades.stamina.price
         clickUpgrades.stamina.price = clickUpgrades.stamina.price * 2
@@ -81,6 +83,7 @@ function buyFriend() {
         autoUpgrades.friend.quantity += 1
         crystals -= autoUpgrades.friend.price
         autoUpgrades.friend.price = autoUpgrades.friend.price * 2
+        // crystals += autoUpgrades.friend.quantity * autoUpgrades.friend.multiplier
     }
     update()
     // collectAutoUpgrades()
@@ -95,6 +98,7 @@ function buySluice() {
         autoUpgrades.sluice.quantity += 1
         crystals -= autoUpgrades.sluice.price
         autoUpgrades.sluice.price = autoUpgrades.sluice.price * 2
+        // crystals += autoUpgrades.sluice.quantity * autoUpgrades.sluice.multiplier
     }
     update()
     document.getElementById('buy-sluice').innerText = autoUpgrades.sluice.quantity
@@ -108,6 +112,9 @@ function initiateAutoUpgrades() {
     document.getElementById('Crystals').innerHTML = crystals
     if (autoUpgrades.friend.quantity >= 1) {
         crystals += autoUpgrades.friend.quantity * autoUpgrades.friend.multiplier
+    }
+    if (autoUpgrades.sluice.quantity >= 1) {
+        crystals += autoUpgrades.sluice.quantity * autoUpgrades.sluice.multiplier
     }
 }
 
